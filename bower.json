@@ -1,0 +1,16 @@
+{
+  "name": "Mean",
+  "version": "0.0.0",
+  "description": "Master Of Masters",
+  "moduleType": [
+    "node"
+  ],
+  "authors": [
+    "Edgar Mendoza"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1"
+  }
+}
