@@ -33,22 +33,20 @@ db.on('error', console.error.bind(console, 'connection failed...'));
 db.once('open', function callback(){
     console.log('mean db opened');
 });
-
+/*
 var messageSchema = mongoose.Schema({message: String});
 var Message = mongoose.model('Message', messageSchema);
 var mongoMessage;
 Message.findOne().exec(function(err, messageDoc){
     mongoMessage = messageDoc.message;
 });
-
+*/
 app.get('/partials/:partialPath', function(req, res){//config para angular de jade
     res.render('partials/' + req.params.partialPath);
 })
 
 app.get('*', function(req, res){//atrapar todas las llamadas a index
-    res.render('index', {
-        mongoMessage: mongoMessage           
-              });
+    res.render('index');
 });
 
 var port= 3030;
